@@ -1,0 +1,267 @@
+@import url(
+'https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville:ital@1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;   
+}
+body{
+    background-color: lightskyblue;
+}
+.header{
+    background-color: indianred;
+    
+}
+.header_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+.nav_list{
+    display: flex;
+    column-gap: 40px;
+    list-style: none;
+}
+.nav_link{
+    color: rgba(255,255,255,0.75);
+    font-size: 15px;
+    transition: all 0.4s;
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+}
+.nav_link:hover,
+.nav_link:focus{
+    color: rgba(255,255,255,0.75);
+
+}
+.nav_link::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color:cyan;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: all 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}
+.nav_link:hover::after{
+    opacity: 1;
+}
+@media(max-width: 650px){
+    .header_content{
+        flex-direction: column;
+        padding: 25px 0;
+        row-gap: 18px;
+    }
+}
+.nav_list{
+    column-gap: 20px;
+}
+.logo{
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out; 
+}
+.logo:hover {
+    color:#228B22; /* Change the color on hover */
+}
+
+.surface {
+    height: 300px;
+    width: 200%;
+    display: block;
+    position: relative;
+    bottom: 50px;
+    left: -600px;
+    background: url('./surface.png');
+    background-repeat:repeat-x;
+    overflow: hidden;
+    z-index: -1;
+    animation: moveRight 10s linear infinite;
+    
+}
+
+.ambulance {
+    position: absolute;
+    top: 150px;
+    left: 100%;
+    width: 20%;
+    z-index: 0;
+    animation: suspension 2s linear infinite, moveBus 12s linear infinite;
+}
+
+.van {
+    position: absolute;
+    top: 200px;
+    left: 7%;
+    width: 15%;
+    z-index: -1;
+    animation: suspension 2s linear infinite, moveVan 8s linear infinite;
+}
+
+.cycle {
+    position: absolute;
+    top: 250px;
+    left: 2%;
+    width: 4%;
+    z-index: -1;
+    animation: moveCycle 10s linear infinite;
+}
+
+@keyframes moveRight {
+    100% {
+        transform: translateX(520px)
+    }
+}
+
+@keyframes moveBus {
+    100% {
+        transform: translateX(-1500px)
+    }
+}
+
+@keyframes moveVan {
+    100% {
+        transform: translateX(1300px)
+    }
+}
+
+@keyframes moveCycle {
+    100% {
+        transform: translateX(1000px)
+    }
+}
+
+@keyframes suspension {
+    100% {
+        transform: translateY(-1px)
+    }
+    50% {
+        transform: translateY(1px)
+    }
+    25% {
+        transform: translateY(-1px)
+    }
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.top-button, .middle-button, .bottom-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: darkgoldenrod;
+    color: maroon;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    margin: 10px 0;
+    font-family: "Poppins",sans-serif;
+}
+
+
+
+.top-button:hover, .middle-button:hover, .bottom-button:hover {
+    background-color: indianred;
+}
+.Quote{
+    color:maroon;
+    font-display: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.Profile {
+    font-family: 'Poppins', sans-serif;
+    color: maroon;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.Profile:hover {
+    background-color: indianred;
+    color: white;
+}
+
+.middle-button {
+    padding: 10px 20px; 
+    font-size: 16px;
+    background-color: darkgoldenrod;
+    color: maroon;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.middle-button:hover {
+    background-color: indianred;
+}
+.Login {
+    font-family: 'Poppins', sans-serif;
+    color: maroon;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.Login:hover {
+    background-color: indianred;
+    color: white;
+}
+
+.bottom-button {
+    padding: 10px 20px; /* Adjusted padding to match the upper button */
+    font-size: 16px;
+    background-color: darkgoldenrod;
+    color: maroon;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bottom-button:hover {
+    background-color: indianred;
+}
+
+.ambulance2 {
+    font-family: 'Poppins', sans-serif;
+    color: maroon;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ambulance2:hover {
+    background-color: indianred;
+    color: white;
+}

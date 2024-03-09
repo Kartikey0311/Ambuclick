@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Service</title>
+    <link rel="stylesheet" href="ambulance.css" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(116, 186, 210);
+}
+
+.container {
+    text-align: center;
+    background-color:gray;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 75px;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.ambulance-button {
+    padding: 15px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background-color:red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.ambulance-button:hover {
+    background-color: #45a049;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+</style>
+<body>
+
+<div class="container">
+    <h1>Select the Ambulance as per the Emergency</h1>
+    <button class="ambulance-button" onclick="callAmbulance('Cardiac Ambulance')">Cardiac Ambulance</button>
+    <button class="ambulance-button" onclick="callAmbulance('Basic Life Support Ambulance')">Basic Life Support Ambulance</button>
+    <button class="ambulance-button" onclick="callAmbulance('Transport Ambulance')">Transport Ambulance</button>
+
+    <div class="popup" id="popup">
+        <p>The Ambulance is on its way.</p>
+    </div>
+</div>
+
+<script>
+    function callAmbulance(ambulanceType) {
+        // Display the popup
+        document.getElementById('popup').style.display = 'block';
+
+        // Simulate an asynchronous request (replace this with actual backend communication)
+        setTimeout(function () {
+            // Hide the popup after a delay (simulating the ambulance arriving)
+            document.getElementById('popup').style.display = 'none';
+            alert(`Ambulance (${ambulanceType}) has arrived!`);
+        }, 3000); // 3000 milliseconds (3 seconds) delay for simulation
+    }
+</script>
+
+</body>
+</html>

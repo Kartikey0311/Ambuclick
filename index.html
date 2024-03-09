@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmbuClick</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+
+
+<header class="header">
+    <div class="header_content">
+        <a class="logo" href="about.html">AmbuClick</a>
+        
+        
+
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <a class="nav_link" href="index.html">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="terms&conditions.html" onclick="showPopup()">Terms&Conditions</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="https://www.google.com/maps/place/Mumbai,+Maharashtra/@19.082502,72.716378,11z/data=!3m1!4b1!4m18!1m11!4m10!1m4!2m2!1d72.8169335!2d18.9987652!4e1!1m3!2m2!1d72.6478177!2d19.214745!3e0!3m5!1s0x3be7c6306644edc1:0x5da4ed8f8d648c69!8m2!3d19.0759837!4d72.8776559!16zL20vMDR2bXA!5m1!1e1?entry=ttu">Location</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="contacts.html">Contacts</a>
+                    
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class='surface'></div>
+    <div class='ambulance'>
+        <img src='./ambulance.png' alt="Bus" style="width:100%">
+    </div>
+    <div class='van'>
+        <img src='./van.png' alt="Van" style="width:100%">
+    </div>
+    <div class='cycle'>
+        <img src='./cycle.png' alt="Cycle" style="width:100%">
+    </div>
+    <div class="Quote">
+        <p>
+            "Empowering wellness, one care at a time.
+            In our commitment to healthcare, we embrace healing with compassion, expertise,
+            and a vision for a healthier future." </p>
+    </div>
+    <div class="button-container">
+        <button class="top-button"><a class="ambulance2" href="ambulance2.html">Call for Ambulance</a></button>
+        <button class="middle-button" ><a class="Profile" href="registration.html">Make your Profile</a></button>
+        <button class="bottom-button"><a class="Login" href="login.html">Log in</a></button>
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.querySelector('.popup');
+            popup.classList.add('showPopup');
+        }
+    </script>
+</body>
+
+</html>
+
